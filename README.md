@@ -26,9 +26,9 @@ json = [ // array of subtitles
 		id : 1, // subtitle number (usually array index + 1)
 
 		time : { // time object
-			start : 0,   // start time in seconds
-			end : 10,    // end time in seconds
-			duration : 0 // difference (end-start)
+			start : 1,   // start time in seconds
+			end : 10.3,    // end time in seconds
+			duration : 9.3 // difference (end-start)
 		},
 
 		content : [

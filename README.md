@@ -1,7 +1,7 @@
 srt.js
 ======
 
-SubRip (.srt) parser and stringifier.
+SubRip (.srt) parser and stringifier. This is the SRT parser we use for [Animite](http://github.com/vas/animite).
 
 ##Usage
 

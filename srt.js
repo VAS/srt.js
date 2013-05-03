@@ -1,4 +1,9 @@
-var SRT = function(){};
+var SRT = function( file ){
+	var self = this;
+	if(file) {
+		return self.parse(file);
+	}
+};
 
 SRT.prototype.parse = function( file ) {
 
@@ -13,7 +18,7 @@ SRT.prototype.parse = function( file ) {
 		var fragments = srt[i].split("\n");
 
 		srt[i] = { 
-			"id" : fragments[0],
+			"id" : parseInt(fragments[0]),
 			"time" : parseTime(fragments[1]),
 			"content" : fragments.splice(2)
 		};
@@ -58,6 +63,8 @@ SRT.prototype.parse = function( file ) {
 };
 
 SRT.prototype.stringify = function( srt ) {
+
+	if( !srt ) srt = this;
 	
 	var string = '';
  	
@@ -95,3 +102,17 @@ SRT.prototype.stringify = function( srt ) {
 	 	return startTime+' --> '+endTime;	
  	}
 };
+
+/* Node Tests
+
+var fs = require('fs');
+var srt = fs.readFileSync('srt.srt', 'utf8');
+
+srtx = new SRT();
+
+obj = srtx.parse(srt);
+str = srtx.stringify(obj);
+
+console.log( str );
+
+*/

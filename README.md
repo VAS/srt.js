@@ -22,7 +22,7 @@ The JSON structure of the SRT is the following:
 ```javascript
 
 json = [ // array of subtitles
-	{ 
+	{ // subtitle object
 		id : 1, // subtitle number (usually array index + 1)
 
 		time : { // time object

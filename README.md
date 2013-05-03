@@ -26,14 +26,14 @@ json = [ // array of subtitles
 		id : 1, // subtitle number (usually array index + 1)
 
 		time : { // time object
-			start : 0, // start time in seconds
-			end : 10, // end time in seconds
+			start : 0,   // start time in seconds
+			end : 10,    // end time in seconds
 			duration : 0 // difference (end-start)
 		},
 
 		content : [
-			"Winter is coming.", // each array element is on a separate line
-			"You said that 3 seasons ago..." 
+			"Winter is coming.", // each array element is an .srt "\n"
+			"You keep saying that..."
 		]
 	}
 ]

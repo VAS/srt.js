@@ -21,21 +21,21 @@ The JSON structure of the SRT is the following:
 
 ```javascript
 
-[ // array of subtitles
-	{ // subtitle object
-		id : 1, // subtitle number (usually array index + 1)
+[ // array of subtitle objects
+  { // subtitle object
+    id : 1, // subtitle number (usually array index + 1)
 
-		time : { // time object
-			start : 1,   // start time in seconds
-			end : 10.3,    // end time in seconds
-			duration : 9.3 // difference (end-start)
-		},
+    time : { // time object
+      start : 1,   // start time in seconds
+      end : 10.3,    // end time in seconds
+      duration : 9.3 // difference (end-start)
+    },
 
-		content : [
-			"Winter is coming.", // each array element is an .srt "\n"
-			"You keep saying that..."
-		]
-	}
+    content : [ // array of subtitle lines ("\n")
+      "Winter is coming.", 
+      "You keep saying that..."
+    ]
+  }
 ]
 
 ```

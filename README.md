@@ -1,7 +1,7 @@
 srt.js
 ======
 
-SubRip (.srt) parser and stringifier. This is the SRT parser we use for [Animite](http://github.com/vas/animite).
+SubRip (.srt) parser and stringifier. This is the SRT parser we use for [Animite](http://github.com/vas/animite). NodeJS compatible!
 
 ##Usage
 
@@ -10,7 +10,7 @@ SubRip (.srt) parser and stringifier. This is the SRT parser we use for [Animite
 // initialize
 var srt = new SRT();
 
-// parse into an object
+// parse an .srt (SubRip) file into an object
 var json = srt.parse( file );
 
 // re-encode to SubRip string
@@ -38,4 +38,10 @@ json = [ // array of subtitles
 	}
 ]
 
+```
+
+For quick use, just use:
+
+```javascript
+var srt = new SRT(file); // will automatically return parsed .srt
 ```

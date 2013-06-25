@@ -18,7 +18,7 @@ var SRT = function( file ){
 SRT.prototype.parse = function( file ) {
 
 	if( /\r/.test(file) ) {
-		file = file.replace(/\r/g, "");
+		file = file.replace(/\r/g, "").trim();
 	}
 
  	var srt = file.split("\n\n");

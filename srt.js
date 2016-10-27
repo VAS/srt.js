@@ -113,7 +113,11 @@ SRT.prototype.stringify = function( srt ) {
  	}
 };
 
-/* Node Tests
+/* 
+ *  Node Tests
+ */
+
+/*
 
 var fs = require('fs');
 var srt = fs.readFileSync('srt.srt', 'utf8');
